@@ -18,6 +18,11 @@ body {
     }
 }
 
+i {
+    width: 100%;
+    font-weight: 900;
+}
+
 main > section, footer > ul > li {
     background-color: rgba($color: #ffff, $alpha: 0.6);
     border-radius: 1rem;
