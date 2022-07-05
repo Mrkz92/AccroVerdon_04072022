@@ -1,6 +1,6 @@
 @font-face {
     font-family: khand-r;
-    src: url(../CSS/FONT/khand/khand-regular.ttf);
+    src: url(../FONT/khand/khand-regular.ttf);
 }
 * {
     font-family: khand-r;
@@ -40,6 +40,9 @@ header {
             justify-content: flex-end;
             list-style: none;
             li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 margin: 0 1rem;
                 padding: .5rem 1rem;
                 border-radius: 1rem;
@@ -50,6 +53,9 @@ header {
 }
 
 main {
+    .presentation_image {
+        width: 100%;
+    }
     h2 {
         display: flex;
         justify-content: center;
