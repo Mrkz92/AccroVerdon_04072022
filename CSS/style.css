@@ -19,7 +19,7 @@ body {
 
 .navbar {
   padding: 0 1rem;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.6);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   display: flex;
@@ -53,15 +53,21 @@ body {
   color: red;
 }
 
-.presentation {
+.main-container {
   margin: 2rem;
   font-weight: bold;
+}
+.main-container h1, .main-container h2 {
+  display: flex;
+  justify-content: center;
+}
+.main-container .presentation {
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.presentation .image-container img {
+.main-container .presentation .image-container img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -71,13 +77,90 @@ body {
           backdrop-filter: blur(1px);
   border-radius: 50%;
 }
-.presentation p {
+.main-container .presentation .introduction {
   font-size: larger;
+}
+.main-container .stages, .main-container .hours, .main-container .prices, .main-container .contact, .main-container .location, .main-container .security {
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.main-container .stages .stages-description, .main-container .hours .stages-description, .main-container .prices .stages-description, .main-container .contact .stages-description, .main-container .location .stages-description, .main-container .security .stages-description {
+  align-items: flex-start;
+}
+.main-container .stages .hours-description, .main-container .hours .hours-description, .main-container .prices .hours-description, .main-container .contact .hours-description, .main-container .location .hours-description, .main-container .security .hours-description {
+  padding: 1rem;
+  font-weight: lighter;
+}
+.main-container .stages table, .main-container .hours table, .main-container .prices table, .main-container .contact table, .main-container .location table, .main-container .security table {
+  border-collapse: collapse;
+  display: flex;
+  justify-content: center;
+}
+.main-container .stages table td, .main-container .hours table td, .main-container .prices table td, .main-container .contact table td, .main-container .location table td, .main-container .security table td {
+  border: 1px solid black;
+  padding: 0.2rem 1rem;
+}
+.main-container .contactAndLocation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main-container .contactAndLocation .contact, .main-container .contactAndLocation .location {
+  padding: 1rem;
+  width: auto;
+}
+.main-container .contactAndLocation .contact .contact-option {
+  display: flex;
+  flex-direction: column;
+}
+.main-container .contactAndLocation .contact .contact-option div {
+  padding: 1rem auto;
+}
+.main-container .contactAndLocation .contact .contact-option .option-mail {
+  flex-direction: column;
+}
+.main-container .contactAndLocation .contact .contact-option .option-mail .mail-form {
+  display: flex;
+  flex-direction: column;
+}
+.main-container .contactAndLocation .contact .contact-option .option-mail .mail-form .form-group {
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.main-container .contactAndLocation .contact .contact-option .option-mail .mail-form .form-group .name {
+  max-width: 150px;
+}
+.main-container .contactAndLocation .contact .contact-option .option-mail .mail-form .form-group .email {
+  max-width: 250px;
+}
+.main-container .contactAndLocation .contact .contact-option .option-mail .mail-form .form-group .message {
+  max-width: 300px;
+  height: 150px;
+}
+.main-container .contactAndLocation .contact .contact-option .option-mail .mail-form .form-group .send {
+  width: 100px;
+}
+.main-container .contactAndLocation .location .location-description {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-container .security ul li {
+  list-style: disc;
+  margin: 0 1rem;
+  padding: 1rem 0.5rem;
 }
 
 footer {
   padding: 0 1rem;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.6);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   display: flex;
@@ -126,7 +209,6 @@ footer > ul > li {
   .navbar .nav-menu .nav-list .nav-link {
     padding: 1rem;
   }
-
   .mobile-navbar {
     background-color: inherit;
     -webkit-backdrop-filter: none;
@@ -138,7 +220,6 @@ footer > ul > li {
   .mobile-navbar .mobile-menu {
     margin-left: 0;
   }
-
   .mobile-main, .mobile-footer {
     display: none;
   }

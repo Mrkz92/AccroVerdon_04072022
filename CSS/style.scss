@@ -21,7 +21,7 @@ body {
 // ----- HEADER -----
     .navbar {
         padding: 0 1rem;
-        background-color: rgba($color: #ffff, $alpha: 0.4);
+        background-color: rgba($color: #ffff, $alpha: 0.6);
         backdrop-filter: blur(5px);
         display: flex;
         flex-direction: row;
@@ -58,25 +58,111 @@ body {
 
 // ----- MAIN -----
 
-.presentation {
+.main-container {
     margin: 2rem;
     font-weight: bold;
-    color: #ffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .image-container {
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            background-color: rgba($color: #ffff, $alpha: 0.4);
-            backdrop-filter: blur(1px);
-            border-radius: 50%;
+    h1, h2{
+        display: flex;
+        justify-content: center;
+    }
+    .presentation {
+        color: #ffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .image-container {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                background-color: rgba($color: #ffff, $alpha: 0.4);
+                backdrop-filter: blur(1px);
+                border-radius: 50%;
+            }
+        }
+        .introduction {
+            font-size: larger;
         }
     }
-    p {
-        font-size: larger;
+    .stages, .hours, .prices, .contact, .location, .security {
+        border-radius: 1rem;
+        padding: 1rem;
+        margin: 1rem 0;
+        background-color: rgba($color: #ffff, $alpha: 0.8);
+        backdrop-filter: blur(5px);
+        .stages-description {
+            align-items: flex-start;
+        }
+        .hours-description {
+            padding: 1rem;
+            font-weight: lighter;
+        }
+        table {
+            border-collapse: collapse;
+            display: flex;
+            justify-content: center;
+            td {
+                border: 1px solid black;
+                padding: .2rem 1rem;
+            }
+        }
+    }
+    .contactAndLocation {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        .contact, .location {
+            padding: 1rem;
+            width: auto;
+        }
+        .contact {
+            .contact-option {
+                display: flex;
+                flex-direction: column;
+                div {
+                    padding: 1rem auto;
+                }
+                .option-mail {
+                    flex-direction: column;
+                    .mail-form {
+                        display: flex;
+                        flex-direction: column;
+                        .form-group {
+                            margin: .5rem 0;
+                            display: flex;
+                            flex-direction: column;
+                            .name {
+                                max-width: 150px;
+                            }
+                            .email {
+                                max-width: 250px;
+                            }
+                            .message {
+                                max-width: 300px;
+                                height: 150px;
+                            }
+                            .send {
+                                width: 100px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .location {
+            .location-description {
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+    .security ul li {
+        list-style: disc;
+        margin: 0 1rem;
+        padding: 1rem .5rem;
     }
 }
 
@@ -84,7 +170,7 @@ body {
 
 footer {
     padding: 0 1rem;
-    background-color: rgba($color: #ffff, $alpha: 0.4);
+    background-color: rgba($color: #ffff, $alpha: 0.6);
     backdrop-filter: blur(5px);
     display: flex;
     justify-content: space-between;
