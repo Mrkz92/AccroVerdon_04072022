@@ -7,7 +7,6 @@
     <title>Accro Verdon</title>
     
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <script src="https://kit.fontawesome.com/0fe66b737d.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -21,7 +20,7 @@
                         <li><a class="nav-link" href="index.html">Accueil</a></li>
                         <li><a class="nav-link" href="stages.html">Nos Parcours</a></li>
                         <li><a class="nav-link" href="prices-hours.html">Tarifs et horaires</a></li>
-                        <li><a class="nav-link" href="contact.html">Contactez-nous</a></li>
+                        <li><a class="nav-link" href="contact-location.html">Contactez-nous</a></li>
                         <li><a class="nav-link active" href="security.html">Sécurité</a></li>
                     </ul>
                 </div>
@@ -55,17 +54,19 @@
         <ul>
             <li>
                 <h3>Retrouvez-nous</h3>
-                <p>Carrefour D49 et D957 <br/> 83630 Vérignon</p>
+                <p>Carrefour D49 et D957 <br> 83630 Vérignon</p>
             </li>
             <li>
                 <h3>Contactez-nous</h3>
-                <p>Par téléphone (sms ou appel) :</br>06 82 07 71 02</p>
-                <p>Par mail (réponse sous 24h) :</br>reservation@accro-verdon.fr</p>
+                <h4>Par téléphone (sms ou appel) :</h4>
+                <a href="tel:+33682077102">06 82 07 71 02</a>
+                <h4>Par mail (réponse sous 24h) :</h4>
+                <a href="mailto:reservation@accro-verdon.fr">reservation@accro-verdon.fr</a>
             </li>
         </ul>
     </footer>
-</body>
-    <script>
+    
+    <script id="click-menu">
         const navButton = document.querySelector(".nav-button");
         const navMenu = document.querySelector(".nav-menu");
         const navbar = document.querySelector(".navbar");
@@ -79,4 +80,5 @@
             footer.classList.toggle("mobile-footer");
         })
     </script>
+</body>
 </body>

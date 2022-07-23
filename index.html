@@ -7,7 +7,6 @@
     <title>Accro Verdon</title>
     
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <script src="https://kit.fontawesome.com/0fe66b737d.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -21,7 +20,7 @@
                         <li><a class="nav-link active" href="index.html">Accueil</a></li>
                         <li><a class="nav-link" href="stages.html">Nos Parcours</a></li>
                         <li><a class="nav-link" href="prices-hours.html">Tarifs et horaires</a></li>
-                        <li><a class="nav-link" href="contact.html">Contactez-nous</a></li>
+                        <li><a class="nav-link" href="contact-location.html">Contactez-nous</a></li>
                         <li><a class="nav-link" href="security.html">Sécurité</a></li>
                     </ul>
                 </div>
@@ -30,37 +29,47 @@
         </div>
     </header>
     <main class="main-container">
-        <section class="presentation">
-            <h1>Bienvenue chez Accro-Verdon</h1>
+        <div class="presentation">
+            <h1>Bienvenue chez</h1>
             <div class="image-container">
                 <img src="PICTURES/LOGO/clip_image002.png" alt="">
             </div>
-            <p class="introduction">Notre nouveau parc accrobranche ouvre ses portes dans un magnifique décor situé à deux pas du lac de Sainte Croix et des Gorges du Verdon. Composé de 4 parcours, il s’adresse à toute la famille à partir de 3 ans.</p>
-        </section>
+            <ul class="introduction">
+                <li class="introduction-item">
+                    Accro-Verdon vous accueille sur un site arboré de 6 hectares au coeur du parc naturel régional du Verdon et à deux pas du Lac de Ste-Croix.
+                </li>
+                <li class="introduction-item">
+                    Toute notre équipe est impatiente de vous faire découvrir nos tyroliennes, sauts dans le vide, luges et monocycles suspendus en toute securité !
+                </li>
+                <li class="introduction-item">
+                    Vous trouverez également sur place, de quoi vous rafraîchir au milieu de la nature verdoyante du haut Var ainsi qu'une vue imprenable du haut de nos plateformes
+                </li>
+            </ul>
+        </div>
     </main>
     <footer class="footer-container">
         <ul>
             <li>
                 <h3>Retrouvez-nous</h3>
-                <p>Carrefour D49 et D957 <br/> 83630 Vérignon</p>
+                <p>Carrefour D49 et D957 <br> 83630 Vérignon</p>
             </li>
             <li>
                 <h3>Contactez-nous</h3>
                 <h4>Par téléphone (sms ou appel) :</h4>
-                <p>06 82 07 71 02</p>
+                <a href="tel:+33682077102">06 82 07 71 02</a>
                 <h4>Par mail (réponse sous 24h) :</h4>
-                <p>reservation@accro-verdon.fr</p>
+                <a href="mailto:reservation@accro-verdon.fr">reservation@accro-verdon.fr</a>
             </li>
         </ul>
     </footer>
-</body>
-    <script>
+    
+    <script id="click-menu">
         const navButton = document.querySelector(".nav-button");
         const navMenu = document.querySelector(".nav-menu");
         const navbar = document.querySelector(".navbar");
         const main = document.querySelector(".main-container");
         const footer = document.querySelector(".footer-container");
- 
+
         navButton.addEventListener('click',()=>{
             navMenu.classList.toggle("mobile-menu");
             navbar.classList.toggle("mobile-navbar");
@@ -68,4 +77,5 @@
             footer.classList.toggle("mobile-footer");
         })
     </script>
+</body>
 </html>

@@ -18,10 +18,10 @@ body {
 }
 
 .navbar {
-  padding: 0 1rem;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
+  padding: 0 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -61,98 +61,156 @@ body {
   display: flex;
   justify-content: center;
 }
-.main-container .presentation {
-  color: white;
+.main-container .presentation, .main-container .park, .main-container .hours, .main-container .prices, .main-container .contactAndLocation, .main-container .security {
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.presentation {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.main-container .presentation .image-container img {
+.presentation h1 {
+  font-size: xxx-large;
+  font-weight: 1000;
+}
+.presentation .image-container {
+  margin: 1rem;
+}
+.presentation .image-container img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  background-color: rgba(255, 255, 255, 0.4);
-  -webkit-backdrop-filter: blur(1px);
-          backdrop-filter: blur(1px);
-  border-radius: 50%;
 }
-.main-container .presentation .introduction {
-  font-size: larger;
-}
-.main-container .stages, .main-container .hours, .main-container .prices, .main-container .contact, .main-container .location, .main-container .security {
-  border-radius: 1rem;
-  padding: 1rem;
-  margin: 1rem 0;
+.presentation .introduction {
   background-color: rgba(255, 255, 255, 0.8);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
+  box-shadow: 5px 10px 10px 2px grey;
+  margin: 1rem;
+  padding: 1rem;
+  color: black;
+  font-size: larger;
+  border-radius: 1rem;
 }
-.main-container .stages .stages-description, .main-container .hours .stages-description, .main-container .prices .stages-description, .main-container .contact .stages-description, .main-container .location .stages-description, .main-container .security .stages-description {
-  align-items: flex-start;
+.presentation .introduction-item {
+  margin: 1rem;
+  list-style: disc;
 }
-.main-container .stages .hours-description, .main-container .hours .hours-description, .main-container .prices .hours-description, .main-container .contact .hours-description, .main-container .location .hours-description, .main-container .security .hours-description {
+
+.park .park-description {
+  display: flex;
+  flex-direction: column;
+}
+.park .park-description li {
+  padding: 1rem;
+  font-size: larger;
+}
+.park .stage {
+  display: flex;
+  flex-direction: column;
+}
+.park .stage .stage-container {
+  box-shadow: 5px 10px 10px 2px grey;
+  color: white;
+  border: 1px solid black;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+.park .stage .stage-container .stage-informations {
+  margin: 0 1rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.park .stage .stage-container .stage-informations .stage-description {
+  margin-right: auto;
+}
+.park .stage .stage-container .stage-informations .stage-description li {
+  padding: 0.5rem 0;
+  list-style: disc;
+}
+.park .stage .stage-container .stage-informations .stage-map {
+  background-color: white;
+  margin-right: 1rem;
+}
+.park .stage .stage-container .stage-informations .stage-map p {
+  color: black;
+}
+.park .stage .stage-container:nth-child(1) {
+  background-color: green;
+}
+.park .stage .stage-container:nth-child(2) {
+  background-color: blue;
+}
+.park .stage .stage-container:nth-child(3) {
+  background-color: brown;
+}
+.park .stage .stage-container:nth-child(4) {
+  background-color: red;
+}
+.park .stage .stage-container:nth-child(5) {
+  background-color: black;
+}
+
+.hours-description {
   padding: 1rem;
   font-weight: lighter;
 }
-.main-container .stages table, .main-container .hours table, .main-container .prices table, .main-container .contact table, .main-container .location table, .main-container .security table {
-  border-collapse: collapse;
+
+table {
+  width: auto;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
 }
-.main-container .stages table td, .main-container .hours table td, .main-container .prices table td, .main-container .contact table td, .main-container .location table td, .main-container .security table td {
+table td {
+  box-shadow: 5px 10px 10px 2px grey;
+  background-color: white;
   border: 1px solid black;
   padding: 0.2rem 1rem;
 }
-.main-container .contactAndLocation {
+
+.contactAndLocation {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
-.main-container .contactAndLocation .contact, .main-container .contactAndLocation .location {
+.contactAndLocation .contact, .contactAndLocation .location {
   padding: 1rem;
   width: auto;
 }
-.main-container .contactAndLocation .contact .contact-option {
-  display: flex;
-  flex-direction: column;
-}
-.main-container .contactAndLocation .contact .contact-option div {
-  padding: 1rem auto;
-}
-.main-container .contactAndLocation .contact .contact-option .option-mail {
-  flex-direction: column;
-}
-.main-container .contactAndLocation .contact .contact-option .option-mail .mail-form {
-  display: flex;
-  flex-direction: column;
-}
-.main-container .contactAndLocation .contact .contact-option .option-mail .mail-form .form-group {
-  margin: 0.5rem 0;
-  display: flex;
-  flex-direction: column;
-}
-.main-container .contactAndLocation .contact .contact-option .option-mail .mail-form .form-group .name {
-  max-width: 150px;
-}
-.main-container .contactAndLocation .contact .contact-option .option-mail .mail-form .form-group .email {
-  max-width: 250px;
-}
-.main-container .contactAndLocation .contact .contact-option .option-mail .mail-form .form-group .message {
-  max-width: 300px;
-  height: 150px;
-}
-.main-container .contactAndLocation .contact .contact-option .option-mail .mail-form .form-group .send {
-  width: 100px;
-}
-.main-container .contactAndLocation .location .location-description {
+.contactAndLocation .contact-options {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contactAndLocation .contact-options .contact-option {
+  padding: 1rem 0;
+}
+.contactAndLocation .contact-options .contact-option a {
+  margin: 1rem;
+  color: red;
+}
+.contactAndLocation .location .location-description {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.main-container .security ul li {
+
+.security ul li {
   list-style: disc;
   margin: 0 1rem;
   padding: 1rem 0.5rem;
@@ -160,7 +218,7 @@ body {
 
 footer {
   padding: 0 1rem;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   display: flex;
@@ -192,9 +250,9 @@ footer > ul > li {
     margin-left: -100%;
     width: 100%;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.4);
-    -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,5 +280,24 @@ footer > ul > li {
   }
   .mobile-main, .mobile-footer {
     display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main-container {
+    margin: 0;
+  }
+  .main-container .presentation, .main-container .park, .main-container .hours, .main-container .prices, .main-container .contactAndLocation, .main-container .security {
+    border-radius: 0;
+    margin: 1rem 0;
+    padding: 0.5rem;
+  }
+  .main-container .stage-container {
+    margin: 1rem 0.5rem;
+    border-radius: 0;
+  }
+  .main-container .stage-container .stage-informations {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
   }
 }/*# sourceMappingURL=style.css.map */
