@@ -199,12 +199,19 @@ table td {
   padding: 1rem 0;
 }
 .contactAndLocation .contact-options .contact-option a {
+  font-size: x-large;
   margin: 1rem;
   color: red;
 }
 .contactAndLocation .location .location-description {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.contactAndLocation .location .location-description p {
+  font-size: large;
+  display: flex;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -220,17 +227,52 @@ footer {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
 }
-footer > ul {
+footer .footer-info {
   width: 100%;
   padding: 1rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
 }
-footer > ul > li {
+footer .footer-info > li {
   margin: 0 auto;
   padding: 1rem;
+}
+footer .social-media {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 35vh;
+}
+footer .social-media_link {
+  padding: 0.1rem;
+  width: 35px;
+  height: 35px;
+  right: 1rem;
+  border: 2px solid black;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .social-media_link :hover {
+  border: transparent;
+  color: white;
+  transition: all 0.2s ease;
+}
+footer .social-media #instagram-link {
+  bottom: 30vh;
+}
+footer .social-media #instagram-link :hover {
+  background: linear-gradient(49.2deg, #f9ed32 10%, #ee2a7b 55%, #002aff);
+}
+footer .social-media #facebook-link {
+  bottom: 10vh;
+}
+footer .social-media #facebook-link :hover {
+  background-color: #1877F2;
 }
 
 @media screen and (min-width: 1300px) {
@@ -336,6 +378,10 @@ footer > ul > li {
   .stage {
     display: flex;
     flex-direction: column;
+  }
+  .park-stage_map:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease;
   }
 }
 @media screen and (max-width: 500px) {

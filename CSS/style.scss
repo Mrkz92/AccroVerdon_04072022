@@ -209,6 +209,7 @@ body {
             .contact-option {
                 padding: 1rem 0;
                 a {
+                    font-size: x-large;
                     margin: 1rem;
                     color: red;
                 }
@@ -258,6 +259,12 @@ body {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                p {
+                    font-size: large;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
             }
         }
     }
@@ -274,16 +281,51 @@ footer {
     padding: 0 1rem;
     @include background-blur;
     display: flex;
-    justify-content: space-between;
-    > ul {
+    flex-direction: column;
+    justify-content: space-around;
+    .footer-info {
         width: 100%;
         padding: 1rem;
         display: flex;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
         > li {
             margin: 0 auto;
             padding: 1rem;
-        } 
+        }
+    }
+    .social-media {
+        display: flex;
+        justify-content: space-around;
+        margin: 1rem 35vh;
+        &_link {
+            padding: .1rem;
+            width: 35px;
+            height: 35px;
+            right: 1rem;
+            border: 2px solid black;
+            border-radius: 50%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            :hover {
+                border: transparent;
+                color: white;
+                transition: all .2s ease;
+            }
+        }
+        #instagram-link {
+            bottom: 30vh;
+            :hover {
+                background: linear-gradient(49.2deg,#f9ed32 10%,#ee2a7b 55%,#002aff);
+            }
+        }
+        #facebook-link {
+            bottom: 10vh;
+            :hover {
+                background-color: #1877F2;
+            }
+        }
     }
    
 }
@@ -393,6 +435,10 @@ footer {
     .stage {
         display: flex;
         flex-direction: column;
+    }
+    .park-stage_map:hover {
+        transform: scale(1.2), ;
+        transition: all 0.3s ease;
     }
 }
 
