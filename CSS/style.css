@@ -12,7 +12,7 @@
 
 body {
   font-family: khand-r;
-  background-image: url(../PICTURES/PHOTOS/IMG_0448.jpg);
+  background-image: url(../PICTURES/background.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -61,7 +61,7 @@ body {
   display: flex;
   justify-content: center;
 }
-.main-container .presentation, .main-container .park, .main-container .hours, .main-container .prices, .main-container .contactAndLocation, .main-container .security {
+.main-container .presentation, .main-container .pictures, .main-container .park, .main-container .hours, .main-container .prices, .main-container .contactAndLocation, .main-container .security {
   background-color: rgba(255, 255, 255, 0.8);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
@@ -102,6 +102,94 @@ body {
 .presentation .introduction-item {
   margin: 1rem;
   list-style: disc;
+}
+
+.pictures .slider {
+  display: none;
+}
+.pictures .slide-container {
+  max-width: 400px;
+  position: relative;
+  margin: auto;
+}
+.pictures .prev, .pictures .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: black;
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.6s ease;
+}
+.pictures .prev {
+  left: 15px;
+}
+.pictures .next {
+  right: 15px;
+}
+.pictures .prev:hover, .pictures .next:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.pictures .slide-index {
+  color: #ffffff;
+  font-size: 13px;
+  padding: 15px;
+  position: absolute;
+  top: 0;
+}
+.pictures .slide-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.pictures .slide-dot {
+  text-align: center;
+}
+.pictures .dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #999999;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.pictures .active, .pictures .dot:hover {
+  background-color: #111111;
+}
+.pictures .fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .park .park-description {
@@ -231,7 +319,6 @@ footer {
   justify-content: space-around;
 }
 footer .footer-info {
-  width: 100%;
   padding: 1rem;
   display: flex;
   flex-flow: row wrap;
@@ -241,9 +328,10 @@ footer .footer-info > li {
   padding: 1rem;
 }
 footer .social-media {
+  width: 200px;
   display: flex;
   justify-content: space-around;
-  margin: 1rem 35vh;
+  margin: 1rem auto;
 }
 footer .social-media_link {
   padding: 0.1rem;
@@ -258,21 +346,21 @@ footer .social-media_link {
   align-items: center;
 }
 footer .social-media_link :hover {
-  border: transparent;
-  color: white;
   transition: all 0.2s ease;
 }
-footer .social-media #instagram-link {
-  bottom: 30vh;
-}
-footer .social-media #instagram-link :hover {
+footer .social-media #instagram-link:hover {
+  color: white;
+  border: transparent;
   background: linear-gradient(49.2deg, #f9ed32 10%, #ee2a7b 55%, #002aff);
 }
-footer .social-media #facebook-link {
-  bottom: 10vh;
-}
-footer .social-media #facebook-link :hover {
+footer .social-media #facebook-link:hover {
+  color: white;
+  border: transparent;
   background-color: #1877F2;
+}
+footer #copyright {
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media screen and (min-width: 1300px) {
@@ -329,7 +417,7 @@ footer .social-media #facebook-link :hover {
     grid-row: 3;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .navbar {
     padding: 0;
     display: flex;
@@ -375,6 +463,8 @@ footer .social-media #facebook-link :hover {
   .mobile-main, .mobile-footer {
     display: none;
   }
+}
+@media screen and (max-width: 800px) {
   .stage {
     display: flex;
     flex-direction: column;
@@ -382,6 +472,10 @@ footer .social-media #facebook-link :hover {
   .park-stage_map:hover {
     transform: scale(1.2);
     transition: all 0.3s ease;
+  }
+  .social-media_link {
+    display: flex;
+    justify-content: space-around;
   }
 }
 @media screen and (max-width: 500px) {
