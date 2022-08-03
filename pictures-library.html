@@ -20,7 +20,7 @@
                     <ul class="nav-list">
                         <li><a class="nav-link" href="index.html">Accueil</a></li>
                         <li><a class="nav-link" href="stages.html">Nos Parcours</a></li>
-                        <li><a class="nav-link active" href="pictures.html">Photos</a></li>
+                        <li><a class="nav-link active" href="pictures-library.html">Photos</a></li>
                         <li><a class="nav-link" href="prices-hours.html">Tarifs et horaires</a></li>
                         <li><a class="nav-link" href="contact-location.html">Contactez-nous</a></li>
                         <li><a class="nav-link" href="security.html">Sécurité</a></li>
@@ -30,13 +30,14 @@
             </nav>
         </div>
     </header>
-    <main class="main-container">
-        <div class="pictures-container">
-            <div class="pictures">
+    <main class="main">
+        <div class="library-container">
+            <div class="library">
+                <h1>Vos aventures en images</h1>
             </div>
         </div>
     </main>
-    <footer class="footer-container">
+    <footer class="footer">
         <ul class="footer-info">
             <li>
                 <h3>Retrouvez-nous</h3>
@@ -58,20 +59,7 @@
             ©Accro Verdon - Site créé par Marek Zaorski
         </div>
     </footer>
-    
-    <script id="click-menu">
-        const navButton = document.querySelector(".nav-button");
-        const navMenu = document.querySelector(".nav-menu");
-        const navbar = document.querySelector(".navbar");
-        const main = document.querySelector(".main-container");
-        const footer = document.querySelector(".footer-container");
-
-        navButton.addEventListener('click',()=>{
-            navMenu.classList.toggle("mobile-menu");
-            navbar.classList.toggle("mobile-navbar");
-            main.classList.toggle("mobile-main");
-            footer.classList.toggle("mobile-footer");
-        })
-    </script>
+    <script src="SCRIPT/script.js"></script>
+    <script src="SCRIPT/pictures-library.js"></script>
 </body>
 </html>

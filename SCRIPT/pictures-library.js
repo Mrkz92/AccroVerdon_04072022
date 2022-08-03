@@ -1,0 +1,1 @@
+let addPicture = new picture

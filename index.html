@@ -7,6 +7,11 @@
     <title>Accro Verdon</title>
     
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
     <script src="https://kit.fontawesome.com/107c64bb3f.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -20,7 +25,7 @@
                     <ul class="nav-list">
                         <li><a class="nav-link active" href="index.html">Accueil</a></li>
                         <li><a class="nav-link" href="stages.html">Nos Parcours</a></li>
-                        <li><a class="nav-link" href="pictures.html">Photos</a></li>
+                        <li><a class="nav-link" href="pictures-library.html">Photos</a></li>
                         <li><a class="nav-link" href="prices-hours.html">Tarifs et horaires</a></li>
                         <li><a class="nav-link" href="contact-location.html">Contactez-nous</a></li>
                         <li><a class="nav-link" href="security.html">Sécurité</a></li>
@@ -30,7 +35,7 @@
             </nav>
         </div>
     </header>
-    <main class="main-container">
+    <main class="main">
         <div class="presentation">
             <h1>Bienvenue chez</h1>
             <div class="image-container">
@@ -44,58 +49,51 @@
                     Toute notre équipe est impatiente de vous faire découvrir nos tyroliennes, sauts dans le vide, luges et monocycles suspendus en toute securité !
                 </li>
                 <li class="introduction-item">
-                    Vous trouverez également sur place, de quoi vous rafraîchir au milieu de la nature verdoyante du haut Var ainsi qu'une vue imprenable du haut de nos plateformes
+                    Vous trouverez également sur place, de quoi vous rafraîchir au milieu de la nature verdoyante du haut let ainsi qu'une vue imprenable du haut de nos plateformes
                 </li>
             </ul>
         </div>
-        <div class="pictures">
-            <h2>Un parc pour toutes la famille</h2>
-            <div class="slide-container">
-                <div class="slider fade">
-                    <img class="slide-image" src="PICTURES/INDEX-SLIDER/Accroverdon2 Mab2.jpeg" alt="">
-                    <div class="slide-index">1/5</div>
+        <div class="swiper-container">
+            <h2>Un parc pour toute la famille</h2>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                            <img src="PICTURES/INDEX-SLIDER/Accroverdon2.jpg" alt="Mab2" class="slide_1">
+                    </div>
+                    <div class="swiper-slide">
+                            <img src="PICTURES/INDEX-SLIDER/Accroverdon3.jpg" alt="Mab3" class="slide_2">
+                    </div>
+                    <div class="swiper-slide">
+                            <img src="PICTURES/INDEX-SLIDER/Accroverdon4.jpg" alt="Mab4" class="slide_3">
+                    </div>
+                    <div class="swiper-slide">
+                            <img src="PICTURES/INDEX-SLIDER/AccroVerdon6.jpg" alt="Steven2" class="slide_4">
+                    </div>
+                    <div class="swiper-slide">
+                            <img src="PICTURES/INDEX-SLIDER/AccroVerdon8.jpg" alt="Zoe2" class="slide_5">
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"><</div>
+                    <div class="swiper-button-next">></div>
                 </div>
-                <div class="slider fade">
-                    <img class="slide-image" src="PICTURES/INDEX-SLIDER/Accroverdon3 Mab3.jpeg" alt="">
-                    <div class="slide-index">2/5</div>
-                </div>
-                <div class="slider fade">
-                    <img class="slide-image" src="PICTURES/INDEX-SLIDER/Accroverdon4 Mab4.jpeg" alt="">
-                    <div class="slide-index">3/5</div>
-                </div>
-                <div class="slider fade">
-                    <img class="slide-image" src="PICTURES/INDEX-SLIDER/AccroVerdon6 Steven2.jpeg" alt="">
-                    <div class="slide-index">4/5</div>
-                </div>
-                <div class="slider fade">
-                    <img class="slide-image" src="PICTURES/INDEX-SLIDER/AccroVerdon8 Zoe2.jpg" alt="">
-                    <div class="slide-index">5/5</div>
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
-            </div>
-            <br>
-            <div class="slide-dot">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
             </div>
         </div>
     </main>
-    <footer class="footer-container">
+    <footer class="footer">
         <ul class="footer-info">
-            <li>
+            <li id="footer-location">
                 <h3>Retrouvez-nous</h3>
                 <p><i class="fa-solid fa-location-dot"></i> Carrefour D49 et D957 <br> 83630 Vérignon</p>
             </li>
-            <li>
+            <li id="footer-contact">
                 <h3>Contactez-nous</h3>
                 <h4><i class="fa-solid fa-phone"></i> Par téléphone (sms ou appel) :</h4>
                 <a href="tel:+33682077102">06 82 07 71 02</a>
                 <h4><i class="fa-solid fa-at"></i> Par mail (réponse sous 24h) :</h4>
                 <a href="mailto:reservation@accro-verdon.fr">reservation@accro-verdon.fr</a>
+            </li>
+            <li id="legal">
+                <a href="">Mentions légales</a>
             </li>
         </ul>
         <ul class="social-media">
@@ -107,48 +105,31 @@
         </div>
     </footer>
     
-    <script id="click-menu">
-        const navButton = document.querySelector(".nav-button");
-        const navMenu = document.querySelector(".nav-menu");
-        const navbar = document.querySelector(".navbar");
-        const main = document.querySelector(".main-container");
-        const footer = document.querySelector(".footer-container");
-
-        navButton.addEventListener('click',()=>{
-            navMenu.classList.toggle("mobile-menu");
-            navbar.classList.toggle("mobile-navbar");
-            main.classList.toggle("mobile-main");
-            footer.classList.toggle("mobile-footer");
-        })
-    </script>
-
-    <script id="slide">
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("slider");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-        }
+    <script src="SCRIPT/script.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    
+    <!-- Init Swiper -->
+    <script>
+        let swiper = new Swiper('.swiper', {
+        // Install Plugin To Swiper
+            slidesPerView: 1,
+            centeredSlides: true,
+            spaceBetween: 40,
+            loop: true,
+            autoplay: true,
+            delay: 4000,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            // Enable debugger
+            debugger: true,
+        });
     </script>
 </body>
 </html>
