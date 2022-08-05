@@ -202,6 +202,7 @@ body {
                     border-radius: 1rem;
                     display: block;
                     object-fit: cover;
+                    max-width: 400px;
                 }
             }
         }
@@ -273,9 +274,10 @@ body {
     // ------------------------------ PHOTOS ------------------------------
     .library-container {
         .library {
+            margin: 1rem auto ;
             display: flex;
             flex-flow: row wrap;
-            justify-content: space-around;
+            justify-content: flex-start;
             .library-card-image {
                 width: 20%;
                 max-width: 120px;
@@ -439,7 +441,7 @@ body {
 
 @media only screen and (min-width: 980px) {
     .swiper-container img {
-        width: 50%;
+        width: 400px;
         height: auto;
     }
     .stage-container {

@@ -195,6 +195,7 @@ footer #copyright {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
+  max-width: 400px;
 }
 
 .park-container .park-description {
@@ -256,9 +257,10 @@ footer #copyright {
 }
 
 .library-container .library {
+  margin: 1rem auto;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   /* The Modal (background) */
   /* Modal Content (Image) */
   /* Add Animation - Zoom in the Modal */
@@ -350,7 +352,7 @@ footer #copyright {
 
 @media only screen and (min-width: 980px) {
   .swiper-container img {
-    width: 50%;
+    width: 400px;
     height: auto;
   }
   .stage-container {
