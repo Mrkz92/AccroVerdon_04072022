@@ -19,10 +19,10 @@
                 <div class="nav-menu">
                     <ul class="nav-list">
                         <li><a class="nav-link" href="index.html">Accueil</a></li>
-                        <li><a class="nav-link" href="stages.html">Nos Parcours</a></li>
+                        <li><a class="nav-link" href="stages.html">Parcours</a></li>
                         <li><a class="nav-link" href="pictures-library.html">Photos</a></li>
                         <li><a class="nav-link active" href="prices-hours.html">Tarifs et horaires</a></li>
-                        <li><a class="nav-link" href="contact-location.html">Contactez-nous</a></li>
+                        <li><a class="nav-link" href="contact-location.html">Contacts</a></li>
                         <li><a class="nav-link" href="security.html">Sécurité</a></li>
                     </ul>
                 </div>
@@ -30,7 +30,7 @@
             </nav>
         </div>
     </header>
-    <main class="main-container">
+    <main class="main">
         <div class="hours">
             <h2>Nos horaires</h2>
             <h3>Ouverture d'avril à octobre</h3>
@@ -68,7 +68,7 @@
             </table>
         </div>
     </main>
-    <footer class="footer-container">
+    <footer class="footer">
         <ul class="footer-info">
             <li>
                 <h3>Retrouvez-nous</h3>
@@ -91,19 +91,6 @@
         </div>
     </footer>
 
-    <script id="click-menu">
-        const navButton = document.querySelector(".nav-button");
-        const navMenu = document.querySelector(".nav-menu");
-        const navbar = document.querySelector(".navbar");
-        const main = document.querySelector(".main-container");
-        const footer = document.querySelector(".footer-container");
-
-        navButton.addEventListener('click',()=>{
-            navMenu.classList.toggle("mobile-menu");
-            navbar.classList.toggle("mobile-navbar");
-            main.classList.toggle("mobile-main");
-            footer.classList.toggle("mobile-footer");
-        })
-    </script>
+    <script src="SCRIPT/script.js"></script>
 </body>
 </html>

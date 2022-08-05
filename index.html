@@ -24,10 +24,10 @@
                 <div class="nav-menu">
                     <ul class="nav-list">
                         <li><a class="nav-link active" href="index.html">Accueil</a></li>
-                        <li><a class="nav-link" href="stages.html">Nos Parcours</a></li>
+                        <li><a class="nav-link" href="stages.html">Parcours</a></li>
                         <li><a class="nav-link" href="pictures-library.html">Photos</a></li>
                         <li><a class="nav-link" href="prices-hours.html">Tarifs et horaires</a></li>
-                        <li><a class="nav-link" href="contact-location.html">Contactez-nous</a></li>
+                        <li><a class="nav-link" href="contact-location.html">Contacts</a></li>
                         <li><a class="nav-link" href="security.html">Sécurité</a></li>
                     </ul>
                 </div>
@@ -72,9 +72,6 @@
                     <div class="swiper-slide">
                             <img src="PICTURES/INDEX-SLIDER/AccroVerdon8.jpg" alt="Zoe2" class="slide_5">
                     </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"><</div>
-                    <div class="swiper-button-next">></div>
                 </div>
             </div>
         </div>
@@ -92,9 +89,9 @@
                 <h4><i class="fa-solid fa-at"></i> Par mail (réponse sous 24h) :</h4>
                 <a href="mailto:reservation@accro-verdon.fr">reservation@accro-verdon.fr</a>
             </li>
-            <li id="legal">
+            <!-- <li id="legal">
                 <a href="">Mentions légales</a>
-            </li>
+            </li> -->
         </ul>
         <ul class="social-media">
             <li class="social-media_link" id="instagram-link"><a href="https://www.instagram.com/AccroVerdon/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram fa-xl"></i></a></li>
@@ -109,27 +106,6 @@
     
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     
-    <!-- Init Swiper -->
-    <script>
-        let swiper = new Swiper('.swiper', {
-        // Install Plugin To Swiper
-            slidesPerView: 1,
-            centeredSlides: true,
-            spaceBetween: 40,
-            loop: true,
-            autoplay: true,
-            delay: 4000,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            // Enable debugger
-            debugger: true,
-        });
-    </script>
+    <script src="SCRIPT/swiper.js"></script>
 </body>
 </html>
