@@ -13,4 +13,4 @@ let swiper = new Swiper('.swiper', {
       },
       // Enable debugger
       debugger: true,
-  });
+});
