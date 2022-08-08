@@ -2,12 +2,40 @@
   font-family: khand-r;
   src: url(../FONT/khand/khand-regular.ttf);
 }
+@font-face {
+  font-family: khand-sb;
+  src: url(../FONT/khand/khand-semibold.ttf);
+}
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
   color: inherit;
+}
+
+h1, h2 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: khand-sb;
+  font-style: italic;
+  border-bottom: solid 2px black;
+  padding-bottom: 0;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  text-shadow: -5px 4px 3px grey;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-size: xxx-large;
+}
+
+h2 {
+  font-size: xx-large;
 }
 
 body {
@@ -54,19 +82,16 @@ body {
   color: red;
 }
 
-.park-container, .swiper-container, .gallery-container, .hours, .prices, .contactAndLocation, .security-container {
+main > div {
   background-color: rgba(255, 255, 255, 0.8);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   margin: 2rem;
   font-weight: bold;
   border-radius: 1rem;
+  padding: 1rem;
 }
-.park-container h1, .park-container h2, .swiper-container h1, .swiper-container h2, .gallery-container h1, .gallery-container h2, .hours h1, .hours h2, .prices h1, .prices h2, .contactAndLocation h1, .contactAndLocation h2, .security-container h1, .security-container h2 {
-  display: flex;
-  justify-content: center;
-}
-.park-container > div, .swiper-container > div, .gallery-container > div, .hours > div, .prices > div, .contactAndLocation > div, .security-container > div {
+main > div > div {
   padding: 1rem;
   margin: 1rem 0;
 }
@@ -132,20 +157,19 @@ footer #copyright {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: inherit;
+  -webkit-backdrop-filter: inherit;
+          backdrop-filter: inherit;
 }
 .presentation h1 {
   color: white;
-  font-style: italic;
-  margin-top: 1rem;
-  padding: 0.5rem 2rem;
-  font-size: xxx-large;
-  font-weight: 1000;
+  text-shadow: 5px 4px 3px black;
 }
 .presentation .image-container {
   background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0px 0px 200px 40px white;
   border-radius: 50%;
-  margin: 1rem;
+  margin-top: 1rem;
   max-width: 600px;
   max-height: 800px;
 }
@@ -169,13 +193,15 @@ footer #copyright {
 .presentation .introduction-item {
   margin: 1rem;
   list-style: disc;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .swiper-container {
   position: relative;
   height: 100%;
   margin: 1rem;
-  padding: 0 1rem;
+  padding: 1rem;
 }
 .swiper-container .swiper {
   height: 100%;
@@ -205,10 +231,11 @@ footer #copyright {
   flex-direction: column;
   align-items: center;
 }
-.park-container .park-description li {
+.park-container .park-description_item {
   padding: 1rem;
   font-size: larger;
-  text-align: center;
+  text-align: justify;
+  text-justify: inter-word;
 }
 .park-container .stage-container .stage:nth-child(1) {
   background-color: green;
@@ -424,6 +451,8 @@ footer #copyright {
   list-style: disc;
   margin: 0 1rem;
   padding: 1rem 0.5rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 @media only screen and (min-width: 980px) {
