@@ -42,11 +42,11 @@ h1, h2 {
 }
 
 h1 {
-    font-size: xxx-large;
+    font-size: xx-large;
 }
 
 h2 {
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 body {
@@ -157,9 +157,14 @@ body {
                 background-color: #1877F2;
             }
         }
-        #copyright {
+        .footer-mentions {
             display: flex;
-            justify-content: flex-end;
+            flex-flow: wrap row;
+            justify-content: space-around;
+            #copyright {
+                display: flex;
+                justify-content: flex-end;
+            }
         }
     }
 
@@ -444,6 +449,33 @@ body {
                     flex-direction: row;
                     align-items: center;
                 }
+                .map {
+                    width: 100%;
+                    @media screen and (min-width: 610px) {
+                        &-m {
+                            display: flex;
+                        }
+                        &-s, &-xs {
+                            display: none;
+                        }
+                    }
+                    @media screen and (max-width: 609px) and (min-width: 410px) {
+                        &-s {
+                            display: flex;
+                        }
+                        &-m, &-xs {
+                            display: none;
+                        }
+                    }
+                    @media screen and (max-width: 409px) {
+                        &-xs {
+                            display: flex;
+                        }
+                        &-m, &-s {
+                            display: none;
+                        }
+                    }
+                }
             }
         }
     }
@@ -455,6 +487,29 @@ body {
         padding: 1rem .5rem;
         text-align: justify;
         text-justify: inter-word;
+    }
+
+    // ------------------------------ MENTIONS ------------------------------
+    .mentions-container {
+        .mentions-item {
+            text-align: justify;
+            h3 {
+                width: max-content;
+                font-family: khand-sb;
+                font-style: italic;
+                border-bottom: solid 2px black;
+                padding-bottom: 0;
+                margin: 1rem .5rem;
+                display: flex;
+            }
+            ul {
+                padding: .5rem 1rem;
+                li {
+                    list-style: disc;
+                }
+            }
+
+        }
     }
 
 // ------------------------------ MEDIA QUERRIES ------------------------------
@@ -535,7 +590,6 @@ body {
     }
 }
 @media screen and (max-width: 800px) {
-    // ----NAVBAR BUTTON
     .navbar {
         padding: 0;
         display: flex;
@@ -591,7 +645,7 @@ body {
 @media only screen and (max-width: 700px) {
     .main {
         margin: 0;
-        .swiper-container, .park-container, .gallery-container, .hours, .prices, .contactAndLocation, .security-container {
+        .presentation, .swiper-container, .park-container, .gallery-container, .hours, .prices, .contactAndLocation, .security-container, .mentions {
             border-radius: 0;
             margin: 1rem 0;
             padding: .5rem;

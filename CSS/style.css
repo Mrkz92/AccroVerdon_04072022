@@ -31,11 +31,11 @@ h1, h2 {
 }
 
 h1 {
-  font-size: xxx-large;
+  font-size: xx-large;
 }
 
 h2 {
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 body {
@@ -148,7 +148,12 @@ footer .social-media #facebook-link:hover {
   border: transparent;
   background-color: #1877F2;
 }
-footer #copyright {
+footer .footer-mentions {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-around;
+}
+footer .footer-mentions #copyright {
   display: flex;
   justify-content: flex-end;
 }
@@ -446,6 +451,33 @@ footer #copyright {
   flex-direction: row;
   align-items: center;
 }
+.contactAndLocation .location .location-description .map {
+  width: 100%;
+}
+@media screen and (min-width: 610px) {
+  .contactAndLocation .location .location-description .map-m {
+    display: flex;
+  }
+  .contactAndLocation .location .location-description .map-s, .contactAndLocation .location .location-description .map-xs {
+    display: none;
+  }
+}
+@media screen and (max-width: 609px) and (min-width: 410px) {
+  .contactAndLocation .location .location-description .map-s {
+    display: flex;
+  }
+  .contactAndLocation .location .location-description .map-m, .contactAndLocation .location .location-description .map-xs {
+    display: none;
+  }
+}
+@media screen and (max-width: 409px) {
+  .contactAndLocation .location .location-description .map-xs {
+    display: flex;
+  }
+  .contactAndLocation .location .location-description .map-m, .contactAndLocation .location .location-description .map-s {
+    display: none;
+  }
+}
 
 .security ul li {
   list-style: disc;
@@ -453,6 +485,27 @@ footer #copyright {
   padding: 1rem 0.5rem;
   text-align: justify;
   text-justify: inter-word;
+}
+
+.mentions-container .mentions-item {
+  text-align: justify;
+}
+.mentions-container .mentions-item h3 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: khand-sb;
+  font-style: italic;
+  border-bottom: solid 2px black;
+  padding-bottom: 0;
+  margin: 1rem 0.5rem;
+  display: flex;
+}
+.mentions-container .mentions-item ul {
+  padding: 0.5rem 1rem;
+}
+.mentions-container .mentions-item ul li {
+  list-style: disc;
 }
 
 @media only screen and (min-width: 980px) {
@@ -590,7 +643,7 @@ footer #copyright {
   .main {
     margin: 0;
   }
-  .main .swiper-container, .main .park-container, .main .gallery-container, .main .hours, .main .prices, .main .contactAndLocation, .main .security-container {
+  .main .presentation, .main .swiper-container, .main .park-container, .main .gallery-container, .main .hours, .main .prices, .main .contactAndLocation, .main .security-container, .main .mentions {
     border-radius: 0;
     margin: 1rem 0;
     padding: 0.5rem;
