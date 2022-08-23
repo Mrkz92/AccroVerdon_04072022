@@ -74,12 +74,19 @@ body {
   align-items: center;
 }
 .navbar .nav-menu .nav-list .nav-link {
-  padding: 0 1rem;
+  padding: 3.2rem 1rem;
   display: flex;
   justify-content: center;
+  border-top: 3px solid transparent;
+  border-top: 3px solid transparent;
 }
 .navbar .nav-menu .nav-list .nav-link.active {
   color: red;
+  border-top: 3px solid red;
+}
+.navbar .nav-menu .nav-list .nav-link:hover {
+  color: red;
+  border-top: 3px solid red;
 }
 
 main > div {
@@ -486,6 +493,15 @@ footer .footer-mentions #copyright {
   text-align: justify;
   text-justify: inter-word;
 }
+.security .rules-link {
+  width: 100%;
+  padding-top: 2rem;
+  display: block;
+  text-decoration: underline;
+  text-align: center;
+  font-style: italic;
+  line-break: auto;
+}
 
 .mentions-container .mentions-item {
   text-align: justify;
@@ -613,8 +629,9 @@ footer .footer-mentions #copyright {
     align-items: center;
     flex-direction: column;
   }
-  .navbar .nav-menu .nav-list .nav-link {
+  .navbar .nav-menu .nav-list .nav-link, .navbar .nav-menu .nav-list .nav-link.active, .navbar .nav-menu .nav-list .nav-link:hover {
     padding: 1rem;
+    border: none;
   }
   .mobile-navbar {
     background-color: inherit;

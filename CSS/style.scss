@@ -83,11 +83,18 @@ body {
                 display: flex;
                 align-items: center;
                 .nav-link {
-                    padding: 0 1rem;
+                    padding: 3.2rem 1rem;
                     display: flex;
                     justify-content: center;
+                    border-top: 3px solid transparent;
+                    border-top: 3px solid transparent;
                     &.active {
                         color: red;
+                        border-top: 3px solid red;
+                    }
+                    &:hover {
+                        color: red;
+                        border-top: 3px solid red;
                     }
                 }
             }
@@ -481,12 +488,23 @@ body {
     }
 
     // ------------------------------ SECURITY ------------------------------
-    .security ul li {
-        list-style: disc;
-        margin: 0 1rem;
-        padding: 1rem .5rem;
-        text-align: justify;
-        text-justify: inter-word;
+    .security { 
+        ul li {
+            list-style: disc;
+            margin: 0 1rem;
+            padding: 1rem .5rem;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        .rules-link {
+            width: 100%;
+            padding-top: 2rem;
+            display: block;
+            text-decoration: underline;
+            text-align: center;
+            font-style: italic;
+            line-break: auto;
+        }
     }
 
     // ------------------------------ MENTIONS ------------------------------
@@ -613,8 +631,9 @@ body {
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                .nav-link {
+                .nav-link, .nav-link.active, .nav-link:hover {
                     padding: 1rem;
+                    border: none;
                 }
             }
         }
