@@ -3,10 +3,10 @@ let swiper = new Swiper('.swiper', {
   // Install Plugin To Swiper
       slidesPerView: 1,
       centeredSlides: true,
-      spaceBetween: 40,
+      spaceBetween: 10,
       loop: true,
       autoplay: true,
-      delay: 4000,
+      delay: 3000,
       pagination: {
           el: ".swiper-pagination",
           clickable: true,
