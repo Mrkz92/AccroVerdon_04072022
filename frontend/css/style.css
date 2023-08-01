@@ -1,10 +1,10 @@
 @font-face {
   font-family: khand-r;
-  src: url(../FONT/khand/khand-regular.ttf);
+  src: url(../font/khand/khand-regular.ttf);
 }
 @font-face {
   font-family: khand-sb;
-  src: url(../FONT/khand/khand-semibold.ttf);
+  src: url(../font/khand/khand-semibold.ttf);
 }
 * {
   margin: 0;
